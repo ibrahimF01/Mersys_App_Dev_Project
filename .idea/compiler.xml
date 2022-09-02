@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Mersis_App_Dev_Project" />
+        <module name="fastTeam" />
       </profile>
     </annotationProcessing>
   </component>

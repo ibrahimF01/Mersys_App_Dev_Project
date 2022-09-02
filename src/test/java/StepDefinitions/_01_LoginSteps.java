@@ -36,4 +36,8 @@ public class _01_LoginSteps {
         dc.findAndContainsText("dashboard","Dashboard");
         dc.findAndClick("acceptCookies");
     }
+
+
+   //ahmet burdaydı
+
 }
