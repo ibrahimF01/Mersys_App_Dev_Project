@@ -51,11 +51,7 @@ public class LeftNav extends Parent{
             case "entranceExamsOne" : myElement =entranceExamsOne; break;
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
-            //ahmet
-            //mecit
-            //burdaydı
-            //burdaydı
-            //burdaydı
+
 
 
 
