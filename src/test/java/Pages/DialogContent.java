@@ -67,6 +67,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
+    //omer
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editButton;
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
@@ -98,6 +101,7 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
+            case "editButton" : myElement =editButton; break;
 
         }
 
@@ -121,9 +125,8 @@ public class DialogContent extends Parent{
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
-        waitUntilLoading();
-
         findAndClick("deleteButton");// silme butonua bas
+        waitUntilClickable(deleteDialogBtn);
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
 
