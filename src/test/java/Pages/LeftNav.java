@@ -56,6 +56,19 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Subject Categories']")
     private WebElement subjectCategories;
 
+    @FindBy(xpath = "(//span[text()='Human Resources'])")
+    private WebElement HumanResources;
+
+    @FindBy(xpath = "//span[contains(@class,'nav-link-title ng-tns-c249-18 ng-star-inserted')]")
+    private WebElement setupThree;
+
+    @FindBy(xpath = "//span[text()='Attestations']")
+    private WebElement Attestations;
+
+
+    @FindBy(xpath = "(//span[text()='Position Categories'])")
+    private WebElement PositionsCategories;
+
 
     WebElement myElement;
     public void findAndClick(String strElement){
@@ -76,6 +89,10 @@ public class LeftNav extends Parent{
             case "education" : myElement =education; break;
             case "educationSetup" : myElement =educationSetup; break;
             case "subjectCategories" : myElement =subjectCategories; break;
+            case "HumanResources" : myElement =HumanResources; break;
+            case "setupThree" : myElement =setupThree; break;
+            case "Positions" : myElement =PositionsCategories;
+            case "Attestations" : myElement =Attestations;
 
 
 
