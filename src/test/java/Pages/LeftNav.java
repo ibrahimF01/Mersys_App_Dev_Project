@@ -39,8 +39,7 @@ public class LeftNav extends Parent{
     private WebElement entranceExamsTwo;
 
     WebElement myElement;
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){
         switch (strElement)
         {
             case "setupOne" : myElement =setupOne; break;
@@ -52,6 +51,16 @@ public class LeftNav extends Parent{
             case "entranceExamsOne" : myElement =entranceExamsOne; break;
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
+
+
+
+
+
+
+
+
+
+
         }
 
         clickFunction(myElement);
