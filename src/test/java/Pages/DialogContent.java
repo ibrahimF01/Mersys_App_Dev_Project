@@ -71,9 +71,57 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
+    @FindBy(css = "mat-slide-toggle[formcontrolname='required']")
+    private WebElement required;
+
+    @FindBy(css = "mat-slide-toggle[formcontrolname='active']")
+    private WebElement active;
+
+    @FindBy(css = "mat-slide-toggle[formcontrolname='useCamera']")
+    private WebElement useCamera;
+
+    @FindBy(css = "textarea[formcontrolname='description']")
+    private WebElement description;
+
+    @FindBy(xpath = "(//span[text()='Stage'])[3]")
+    private WebElement stageCheck;
+
+    @FindBy(xpath = "//span[text()=' Student Registration ']")
+    private WebElement studentRegistration;
+
+    @FindBy(xpath = "//span[text()=' Examination ']")
+    private WebElement examination;
+
+    @FindBy(xpath = "//span[text()=' Employment ']")
+    private WebElement employment;
+
+    @FindBy(xpath = "//span[text()=' Certificate ']")
+    private WebElement certificate;
+
+    @FindBy(xpath = "//span[text()=' Contract ']")
+    private WebElement contract;
+
+    @FindBy(xpath = "//span[text()=' Dismissal ']")
+    private WebElement dismissal;
+
+    @FindBy(css = "mat-select[formcontrolname='type']")
+    private WebElement fieldType;
+
+    @FindBy(xpath = "//span[text()=' List of Value ']")
+    private WebElement listOfValue;
+
+    @FindBy(css = "ms-text-field[formcontrolname='key']")
+    private WebElement keyInput;
+
+    @FindBy(css = "ms-text-field[placeholder$='VALUE']")
+    private WebElement valueInput;
+
+    @FindBy(xpath = "//span[text()='Add']")
+    private WebElement exAddButton;
+
+
     WebElement myElement;
-    public void findAndSend(String strElement, String value){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndSend(String strElement, String value){
         switch (strElement)
         {
             case "username" : myElement =username; break;
@@ -84,13 +132,15 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "description" : myElement =description; break;
+            case "keyInput" : myElement =keyInput; break;
+            case "valueInput" : myElement =valueInput; break;
         }
 
         sendKeysFunction(myElement, value);
     }
 
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){
         switch (strElement)
         {
             case "loginButton" : myElement =loginButton; break;
@@ -102,14 +152,26 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "editButton" : myElement =editButton; break;
+            case "required" : myElement =required; break;
+            case "active" : myElement =active; break;
+            case "useCamera" : myElement =useCamera; break;
+            case "stageCheck" : myElement =stageCheck; break;
+            case "studentRegistration" : myElement =studentRegistration; break;
+            case "examination" : myElement =examination; break;
+            case "employment" : myElement =employment; break;
+            case "certificate" : myElement =certificate; break;
+            case "contract" : myElement =contract; break;
+            case "dismissal" : myElement =dismissal; break;
+            case "fieldType" : myElement =fieldType; break;
+            case "listOfValue" : myElement =listOfValue; break;
+            case "exAddButton" : myElement =exAddButton; break;
 
         }
 
         clickFunction(myElement);
     }
 
-    public void findAndContainsText(String strElement, String text){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndContainsText(String strElement, String text){
         switch (strElement)
         {
             case "dashboard" : myElement =dashboard; break;
@@ -122,12 +184,12 @@ public class DialogContent extends Parent{
 
 
     public void SearchAndDelete(String searchText){
-        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
+        findAndSend("searchInput", searchText);
+        findAndClick("searchButton");
 
-        findAndClick("deleteButton");// silme butonua bas
+        findAndClick("deleteButton");
         waitUntilClickable(deleteDialogBtn);
-        findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
+        findAndClick("deleteDialogBtn");
     }
 
 
