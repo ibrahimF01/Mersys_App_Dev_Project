@@ -9,13 +9,11 @@ public class HumanSteps {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
 
-    @And("Click on the Human Resouces in the left Nav")
-    public void clickOnTheHumanResoucesInTheLeftNav() {
+    @And("Click on the Human Resouces Position in the left Nav")
+    public void clickOnTheHumanResoucesPositionInTheLeftNav() {
         ln.findAndClick("HumanResources");
         ln.findAndClick("setupThree");
         ln.findAndClick("Positions");
-
-
     }
 
     @Then("User Add Human Position")
@@ -46,4 +44,6 @@ public class HumanSteps {
 
 
     }
+
+
 }

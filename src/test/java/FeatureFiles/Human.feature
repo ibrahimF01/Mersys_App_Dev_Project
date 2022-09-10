@@ -5,7 +5,7 @@ Feature: Human Resource Functionality
     Then User should login successfuly
 
   Scenario: Admin User Able to Add Position Categories Human Resources
-  And Click on the Human Resouces in the left Nav
+  And Click on the Human Resouces Position in the left Nav
     Then User Add Human Position
     Then User Edit Human Position
     Then User Delete Human Position
