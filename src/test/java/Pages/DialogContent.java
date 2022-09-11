@@ -119,6 +119,19 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[text()='Add']")
     private WebElement exAddButton;
 
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
+    private WebElement capacity;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement code;
+
+    @FindBy(xpath = "//span[text()='Section']")
+    private WebElement section;
+
+    @FindBy(xpath = "//span[text()='School Department']")
+    private WebElement SchoolDepartment;
+
+
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){
@@ -135,6 +148,8 @@ public class DialogContent extends Parent{
             case "description" : myElement =description; break;
             case "keyInput" : myElement =keyInput; break;
             case "valueInput" : myElement =valueInput; break;
+            case "capacity" : myElement =capacity; break;
+            case "code" : myElement =code; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -165,6 +180,8 @@ public class DialogContent extends Parent{
             case "fieldType" : myElement =fieldType; break;
             case "listOfValue" : myElement =listOfValue; break;
             case "exAddButton" : myElement =exAddButton; break;
+            case "section" : myElement =section; break;
+            case "SchoolDepartment" : myElement =SchoolDepartment; break;
 
         }
 
