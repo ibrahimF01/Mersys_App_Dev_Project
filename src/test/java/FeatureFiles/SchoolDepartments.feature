@@ -6,6 +6,7 @@ Feature: School Departments add, edit and delete functionalities
     Then User should login successfuly
     And Click on the Setup, School Location and Departments Button
 
+
     Scenario: Create a school department
 
       And Click on the element in the Dialog

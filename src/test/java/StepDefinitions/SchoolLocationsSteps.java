@@ -9,7 +9,8 @@ import io.cucumber.java.en.And;
 import java.util.List;
 
 
-public class SchoolLocationsSteps {// Haşir
+public class SchoolLocationsSteps {
+
 
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();

@@ -116,6 +116,7 @@ public class LeftNav extends Parent{
             case "Departments" : myElement =Departments; break;
 
 
+
         }
 
         clickFunction(myElement);

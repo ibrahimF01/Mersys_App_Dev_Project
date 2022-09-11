@@ -132,6 +132,7 @@ public class DialogContent extends Parent{
     private WebElement SchoolDepartment;
 
 
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){
         switch (strElement)

@@ -2,6 +2,7 @@ Feature: Adding School Locations, Editing School Locations and Delete School Loc
 
   Background:
 
+
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
