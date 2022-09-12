@@ -131,6 +131,27 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[text()='School Department']")
     private WebElement SchoolDepartment;
 
+    //ahmet
+    @FindBy(css= "[formcontrolname='name'] input")
+    private WebElement bankName;
+
+    @FindBy(css= "[formcontrolname='iban'] input")
+    private WebElement iban;
+
+    @FindBy(css= "[id='mat-select-value-19']")
+    private WebElement Currency;
+
+    @FindBy(css= "[id='mat-option-57'] span")
+    private WebElement Currencychoice;
+
+    @FindBy(css= "[formcontrolname='integrationCode'] input")
+    private WebElement integration;
+
+    @FindBy(css= "formcontrolname='order'")
+    private WebElement order;
+
+
+
 
 
     WebElement myElement;
@@ -150,6 +171,10 @@ public class DialogContent extends Parent{
             case "valueInput" : myElement =valueInput; break;
             case "capacity" : myElement =capacity; break;
             case "code" : myElement =code; break;
+            case "bankName" : myElement =bankName; break;
+            case "iban" : myElement =iban; break;
+            case "integration" : myElement =integration; break;
+            case "order" : myElement =order; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -182,6 +207,8 @@ public class DialogContent extends Parent{
             case "exAddButton" : myElement =exAddButton; break;
             case "section" : myElement =section; break;
             case "SchoolDepartment" : myElement =SchoolDepartment; break;
+            case "Currency" : myElement =Currency; break;
+            case "Currencychoice" : myElement =Currencychoice; break;
 
         }
 
