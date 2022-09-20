@@ -37,15 +37,7 @@ public class _04_DocumentTypesSteps {
         }
 
     }
-    @And("Click on the element in the Dialog")
-    public void clickOnTheElementInTheDialog(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
 
-        for(int i=0;i<listElement.size();i++) {
-            dc.findAndClick(listElement.get(i));
-            GWD.Bekle(1);
-        }
-    }
 
     @And("User sending the data in Dialog content")
     public void userSendingTheDataInDialogContent(DataTable elements) {
@@ -57,9 +49,7 @@ public class _04_DocumentTypesSteps {
 
     }
 
-    @Then("Success message should be displayed")
-    public void successMessageShouldBeDisplayed() {dc.findAndContainsText("successMessage","success");
-    }
+
 
     @And("Delete items from dialog")
     public void deleteItemsFromDialog(DataTable elements) {
