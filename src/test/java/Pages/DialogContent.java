@@ -150,6 +150,18 @@ public class DialogContent extends Parent{
     @FindBy(css= "formcontrolname='order'")
     private WebElement order;
 
+    @FindBy(css= "ms-text-field[formcontrolname='description']") //harun
+    private WebElement Description1;
+
+    @FindBy(css= "ms-text-field[formcontrolname='code']")
+    private WebElement integration1;
+
+    @FindBy(css= "ms-integer-field[formcontrolname='priority']")
+    private WebElement Priority1;
+
+
+
+
 
 
 
@@ -175,6 +187,11 @@ public class DialogContent extends Parent{
             case "iban" : myElement =iban; break;
             case "integration" : myElement =integration; break;
             case "order" : myElement =order; break;
+            case "Description1" : myElement =Description1; break; //harun
+            case "integration1" : myElement =integration1; break;
+            case "Priority1" : myElement =Priority1; break;
+
+
         }
 
         sendKeysFunction(myElement, value);
@@ -209,6 +226,7 @@ public class DialogContent extends Parent{
             case "SchoolDepartment" : myElement =SchoolDepartment; break;
             case "Currency" : myElement =Currency; break;
             case "Currencychoice" : myElement =Currencychoice; break;
+
 
         }
 
